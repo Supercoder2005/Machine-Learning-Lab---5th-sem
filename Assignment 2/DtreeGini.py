@@ -5,6 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 # Read CSV
 df = pd.read_csv("F:\Machine Learning Lab - 5th sem\Assignment 2\data.csv")
+print(df)
 
 # Map categorical values
 d = {'UK': 0, 'USA': 1, 'N': 2}
