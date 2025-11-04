@@ -1,15 +1,19 @@
 import random
-
+import csv
 data = []
 with open("F:\Machine Learning Lab - 5th sem\PCA2 Practice\data.csv","r") as f:
-    for line in f:
-        point = line.strip().split(",")
-        #print(point)
-        temp = []
-        for x in point:
-            temp.append(float(x))
-        data.append(temp)
-#print(data) : [[1.0, 2.0], [1.5, 1.8], [5.0, 8.0], [8.0, 8.0], [1.0, 0.6], [9.0, 11.0]]
+    # for line in f:
+    #     point = line.strip().split(",")
+    #     #print(point) : ['1', '2']['1.5', '1.8']...
+    #     temp = []
+    #     for x in point:
+    #         temp.append(float(x))
+    #     data.append(temp)
+    reader = csv.reader(f)
+    for row in reader:
+        data.append([float(row[0]),float(row[1])])
+    
+    #print(data) : [[1.0, 2.0], [1.5, 1.8], [5.0, 8.0], [8.0, 8.0], [1.0, 0.6], [9.0, 11.0]]
 
 # Function to calculate Euclidean distance between two points
 def distance(point1,point2):
@@ -37,7 +41,7 @@ max_iterations = 100   #The loop will stop after 100 iterations
 
 def kmeans(data,k,max_iterations):
     # randomly selects k points from the dataset to set as centroids 
-    centroids = random.sample(data,k)
+    centroids = random.sample(data,k) # centroids is list in list 
     #print(centroids)
 
     # Repeat untill maximum iterations
