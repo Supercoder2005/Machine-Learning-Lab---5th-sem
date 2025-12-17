@@ -1,5 +1,5 @@
 import csv 
-data = []
+data = []  
 with open("F:\\Machine Learning Lab - 5th sem\\PCA2 Practice\\transactions.csv","r")as file:
     reader = csv.reader(file)
     for row in reader:
@@ -60,7 +60,7 @@ for items in count_combination_freq:
         # split the combination list into left and right parts
         # we want to generate the form : {Milk} --> {Bread,Butter}
         for k in range(1,len(items)):  # outer loop controls the size of LHS
-            for left in combinations(items,k):  # generates all possible combinations for LHS
+            for left in combinations(items,k):  # generates all possible combinations for LHS 
                 right = tuple(sorted(set(items) - set(left)))  # RHS = remaining items that are not in the left-hand side
 
                 # Check that LHS and RHS both exits in our count_combination_freq dictionary or not
