@@ -17,7 +17,7 @@ with open("F:\\Machine Learning Lab - 5th sem\\PCA1 Practice\\review.txt",'r') a
     print(words)
 
     pos_words = ["good","best","awesome","outstanding","fantastic","marvelous","nice","enjoyable","amazing","beautiful","great"]
-    neg_words = ["hokey","2nd","bad","worst","worse","ugly","not","boring"]
+    neg_words = ["hokey","2nd-grade","bad","worst","worse","ugly","not","boring"]
     pronouns = ["i","me","you","she","he"]
 
     features = [0,0,0,0,0,0]
