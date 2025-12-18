@@ -31,7 +31,7 @@ total_entropy = entropy_calculation(yes,no)
 print("Total entropy :",total_entropy)
 
 # Calculate information gain (IG) for each feature 
-features = {"Weather","Time","Mood","Play Music"}
+features = {"Weather","Time","Mood"}
 IG_result = {} # dictionary to store the information gain of each feature 
 
 for feature in features:
@@ -57,7 +57,7 @@ best_ig = -1
 for feature,ig in IG_result.items():
     if ig > best_ig:
         best_ig = ig 
-        best_feature = feature 
+    best_feature = feature 
 
 print("Root node of the decision tree : ",best_feature, " ,with information gain :",ig)
 
